@@ -1,0 +1,28 @@
+<Input File: MAL_WITH_ERRORS.mal, Output File: MAL_WITH_ERRORS.log, Date Processed: 03-01-2016 15:53, My Name: Daniel Galarza>
+
+--------------
+
+MAL Program Listing
+
+3. MOVEI       88, R0           
+  ** Ill-formed operand (operand 1)- bad octal **
+4. MOVEI       1, R1
+5. MOVEI       12, R10          
+  ** Ill-formed operand (operand 2)- bad register or identifier **
+6. TOP:
+7. BLT         R1, R2, CONTI    
+8. ADD         R0, R1           
+  ** Contains too few operands for 'ADD' **
+9. IN          R1               
+  ** Contains an invalid instruction/opcode: IN **
+10. BR          TOP
+11. CONT:   MOVE        R0, TOTAL
+12. END
+--------------
+Total Errors: 4
+  1 Invalid Opcode(s)
+  1 Too Few Operands
+  2 Ill-Formed Operand(s)
+  Label Problem(s) = True
+       Invalid Branch(es): ['CONTI']
+Processing Complete: MAL program is NOT valid!

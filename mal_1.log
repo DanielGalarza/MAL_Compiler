@@ -1,0 +1,20 @@
+<Input File: mal_1.mal, Output File: mal_1.log, Date Processed: 03-03-2016 18:16, My Name: Daniel Galarza>
+
+--------------
+
+MAL Program Listing
+
+1. MOVEI     0, R0
+2. MOVEI     1, R1
+3. MOVEI     12, R2
+4. TOP:
+5. BGT       R1, R2, CONT
+6. ADD       R0, R1, R0
+7. INC       R1
+8. BR        TOP
+9. CONT:   MOVE      R0, TOTAL
+10. END
+
+--------------
+Total Errors: 0
+Processing Complete: MAL program is valid!

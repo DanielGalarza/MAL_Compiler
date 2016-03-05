@@ -1,0 +1,12 @@
+
+
+        MOVEI       88, R0           ;BAD OCTAL
+        MOVEI       1, R1
+        MOVEI       12, R10          ;BAD REGISTER/IDENTIFIER
+TOP:
+        BLT         R1, R2, CONTI    ;INVALID BRANCH
+        ADD         R0, R1           ;TOO FEW OPERANDS
+        IN          R1               ;INVALID OPCODE
+        BR          TOP
+CONT:   MOVE        R0, TOTAL
+        END
